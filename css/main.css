@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    max-width: 1440px;
+}
+
+.previu{
+    position:relative;
+    top: 0;
+    bottom: 0;
+    left: -35%;
+    overflow: hidden;
+    transform-origin: bottom left;
+    transform: skew(-30deg)
+}
+
+.deform{
+    position: relative;
+    height: 400px;
+    left: -115px;
+    top: 0;
+    bottom: 0;
+    width: 150%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    transform: skew(30deg) scale(1.1, 1.1);
+}
+
+.commentarii{
+    height: 600px;
+}
+
+.spacingDown{
+    top: 400px;
+    left: 40px;
+    border-radius: 30px;
+}
+
+.know{
+    background-color: #ffffff;
+    font-size: 26pt;
+    border: 1.5px solid #fff;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+    padding: 8px 18px 8px;
+}
+
+.more{
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 26pt;
+    border: 1.5px solid #5c5c5c;
+    background-position: center center;
+    color: #5c5c5c;
+    position: relative;
+    padding: 8px 18px 8px;
+}
+
+.txtForm{
+    color: #3f3f3f;
+    text-transform: uppercase;
+    font-size: 70pt;
+    position: relative;
+    top: 0; 
+}
+
+.col-8{
+    max-width: 1440px;
+    justify-content: center;
+    min-height: 60px;
+    position: relative;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.btn-secondary{
+    width: 362px;
+    text-align: center;
+    height: 50px;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+}
+
+.web{
+    padding-left: 90px;
+    padding-right: 90px;
+    margin: 40px;
+}
+
+.hiStr{
+    text-transform: uppercase;
+    font-size: 17pt;
+    padding-top: 25px;
+}
+
+.sup{
+    padding-top: 45px;
+}
+
+.drk{
+    margin-top: 90px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 100px;
+}

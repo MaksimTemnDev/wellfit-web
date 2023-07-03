@@ -1,0 +1,509 @@
+body {
+    min-width: 100vh;
+    height: 100%;
+    background-color: black;
+}
+
+.header-line {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-items {
+    color: #fff;
+    text-decoration: none;
+    font-family: Russo One;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    margin-right: 45px;
+    letter-spacing: 0;
+    transition: color 0.3s linear;
+}
+
+.wideside {
+    padding: 0px;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+.nav-items:hover {
+    color: red;
+}
+
+.whtsholder {
+    display: flex;
+    align-items: center;
+}
+
+.whatsup {
+    position: relative;
+    padding-bottom: 5px;
+    left: -5px;
+}
+
+.telegram {
+    position: relative;
+    left: -20px;
+    padding-top: 5px;
+}
+
+.redBorder {
+    border: 3px solid rgba(195.0000035762787, 7.000000057742, 14.000000115484, 1);
+}
+
+.bigwplug {
+    width: 100%;
+    height: 1000px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.bigwcplug {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+.biggplug {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+    height: 980px;
+    transform: skew(0deg, -2deg);
+    background: #e8e8e8;
+    overflow: hidden;
+}
+
+.bigplug {
+    width: 100%;
+    height: 930px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.article {
+    color: #2b2b2b;
+    font-family: Russo One;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 42px;
+}
+
+.content {
+    font-family: Vesper Libre;
+    font-size: 22px;
+}
+
+.withcollage {
+    position: relative;
+    top: 120px;
+}
+
+.article {
+    margin-left: 100px;
+}
+
+.elem_1 {
+    position: relative;
+    left: 70px;
+}
+
+.elem_2 {
+    position: relative;
+    left: 420px;
+    bottom: 425px;
+}
+
+.elem_3 {
+    position: relative;
+    left: 160px;
+    bottom: 410px;
+}
+
+.gray_content {
+    position: relative;
+    transform: skew(0deg, 2deg);
+    justify-content: center;
+    padding: 115px;
+    margin-left: 60px;
+}
+
+.title_midllest {
+    color: #000;
+    font-family: Russo One;
+    font-size: 44px;
+}
+
+.gxed {
+    justify-content: space-between;
+}
+
+.mv_2 {
+    margin-top: 80px;
+    margin-right: 250px;
+}
+
+.mv_1 {
+    margin-top: 80px;
+}
+
+.righted_to {
+    margin-left: 63px;
+}
+
+.sign1 {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+    font-family: Russo One;
+    font-size: 30px;
+}
+
+.moved {
+    margin-left: -10px;
+}
+
+.red-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 16px 90px;
+    border-radius: 10px;
+    font-family: Russo One;
+    letter-spacing: 2px;
+    background-color: #FF0000;
+    transition: color 0.6s linear;
+    position: absolute;
+    left: 50%;
+    margin-left: -265px;
+    margin-top: 90px;
+}
+
+.red-button:hover {
+    border: 2px solid #000;
+}
+
+.element_1 {
+    box-sizing: content-box;
+    overflow: hidden;
+    height: 695px;
+    position: relative;
+}
+
+.element_1 img {
+    position: absolute;
+    height: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.slized {
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.dslized {
+    display: flex;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
+
+.littltewplug {
+    margin-top: 130px;
+    position: relative;
+    bottom: 90px;
+    transform: skew(0deg, -2deg);
+    width: 100%;
+    height: 520px;
+    background: #e8e8e8;
+    ;
+    overflow: hidden;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+.form_input {
+    background: transparent;
+    border: none;
+    width: 70%;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #b7b7b7;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form_grup {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.labelAsk {
+    font-size: 25px;
+}
+
+.form-check-input {
+    outline: none;
+}
+
+.form-check-input[type='checkbox']:checked {
+    outline: none !important;
+    background-color: red;
+    border-color: red;
+  }
+
+.red-btn {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 16px 90px;
+    border-radius: 10px;
+    font-family: Russo One;
+    letter-spacing: 2px;
+    background-color: #FF0000;
+    transition: color 0.6s linear;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.red-btn .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg);
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s infinite linear;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.labelAsk {
+    font-family: Russo One;
+    font-size: 28px;
+}
+
+.fiten {
+    width:auto;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.righter{
+    margin-left: 220px;
+}
+
+.lefter {
+    margin-left: -180px;
+}
+
+.bott-items {
+    color: #fff;
+    text-decoration: none;
+    font-family: Vesper Libre;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 40px;
+    letter-spacing: 0;
+    transition: color 0.3s linear;
+}
+
+.title_links {
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-family: Vesper Libre;
+    font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.budni {
+    color: #fff;
+    text-decoration: none;
+    font-family: Vesper Libre;
+    font-size: 18px;
+    text-align: left;
+}
+
+.whborder {
+    position:relative;
+    border: 100px solid rgba(255, 9, 255, 1);
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    z-index: -900;
+}
+
+.red-btn_sm {
+    margin-top: 6px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: Russo One;
+    letter-spacing: 2px;
+    background-color: #FF0000;
+    transition: color 0.6s linear;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* checkbox style */
+.checkbox_inp {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.checkbx {
+    position: relative;
+}
+
+.check_label {
+    padding-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.check_label::before {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: 2px solid #2b2b2b;
+
+    position: absolute;
+    top: 5;
+    left: -15;
+    z-index: -180;
+}
+
+.check_label::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    background: url("images/icons8-check.svg");
+    background-size: 12px 12px;
+    opacity: 0;
+
+    position: absolute;
+    top: 7;
+    left: -13;
+    z-index: -80;
+}
+
+.checkbox_inp:checked + .check_label::after{
+    opacity: 1;
+}
+
+/* radio style */
+
+.radio-container {
+    box-sizing: border-box;
+    background: transparent;
+    color: #222;
+    height: 24px;
+    display:block;
+    justify-content:flex-start;
+  }
+  
+  .radio-container * {
+    box-sizing: border-box;
+  }
+  
+  .radio-input {
+    position: relative;
+    bottom: -22px;
+    appearance: none;
+    background-color: #ffffff;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #cccfdb;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .radio-input::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s transform ease-in-out;
+    box-shadow: inset 6px 6px #ffffff;
+  }
+  
+  .radio-input:checked {
+    background: #ff0000;
+    border-color: #ff0000;
+  }
+  
+  .radio-input:checked::before {
+    transform: scale(1);
+  }
+  
+  .radio {
+    position: relative;
+    cursor: pointer;
+    padding: 2px 24px;
+    font-family: Vesper Libre;
+    font-size: 16px;
+  }
+
+  .about_product {
+    position: relative;
+    font-family: Vesper Libre;
+    font-size: 16px;
+  }
