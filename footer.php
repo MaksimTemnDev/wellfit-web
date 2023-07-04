@@ -5,7 +5,7 @@
                 <div class="row" style="margin-left: 70px; margin-right: 70px;">
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
-                            <a href="#"><img src="images/image_3.png" width="60px" height="60px"
+                            <a href="http://localhost/fitnessProject/admin.php"><img src="images/image_3.png" width="60px" height="60px"
                                     style="margin-left: 50px; margin-bottom: 20px;" alt=""></a>
                             <ul class="thumbnail-widget" style="list-style-type: none;">
                                 <li>

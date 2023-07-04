@@ -507,3 +507,25 @@ body {
     font-family: Vesper Libre;
     font-size: 16px;
   }
+
+  .inform {
+    position: relative;
+    font-family: Vesper Libre;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+
+  .modal_start {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: transparent;
+    color: #ffcd28;
+  }
+  .krest {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: transparent;
+    color: #000;
+  }
