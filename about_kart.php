@@ -28,8 +28,8 @@
                     <input class="radio-input" id="12mon" type="radio" name="type2" />
                     <label class="radio" for="12mon">12 МЕСЯЦЕВ</label>
                 </div>
-                <a  href="#">
-                    <div class="red-btn_sm" style="margin-top: 130px;">Добавить в корзину</div>
+                <a href="#">
+                    <div class="red-btn_sm" style="margin-top: 130px;" data-toggle="modal" data-target="#modal">Добавить в корзину</div>
                 </a>
                 <div class="about_product" style="margin-top: 30px;">
                     Клубная карта WF PLUS – это стандарт качества и наш топовый продукт.
@@ -45,6 +45,64 @@
                     Карта на короткий период позволяет использовать полноценно все основные зоны клубов, что
                     <br>
                     дает возможность протестировать и войти в регулярный режим тренировок.
+                    <br>
+                    <br>
+                    Покупка карты на длительный период – это залог вашего настроя на результат, за счет
+                    <br>
+                    которого вы также получаете весомую экономию т.к. чем больше период, тем ниже стоимость
+                    <br>
+                    одного занятия.
+                    <br>
+                    <br>
+                    При выборе карты на более длительный срок вы также получите дополнительные
+                    <br>
+                    преимущества. Например, карту можно переоформить или заморозить ее действие,
+                    <br>
+                    воспользоваться преимуществами партнерских программ и скидками на другие услуги клуба.
+                    <br>
+                </div>
+                <div class="inform">
+                    <br>
+                    Возможности по картам WF PLUS (1,3,6 месяцев):
+                </div>
+                <div class="about_product">
+                    <ul>
+                        <li>безлимитное посещение тренажерного зала</li>
+                        <li>помощь дежурного тренера в тренажёрном зале</li>
+                        <li>активация карты в течении 7 дней с момента покупки</li>
+                    </ul>
+                </div>
+                <div class="inform">
+                    <br>
+                    Оплатите только 25% и начните тренироваться сразу!
+                    <!-- Button trigger modal -->
+                    <button type="button" class="modal_start" data-toggle="modal" data-target="#modal">
+                        Подробнее
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close krest" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="images/popup.jpg" width="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_product">
+                    Все клубные карты теперь можно приобрести через сервис "ДОЛЯМИ", который позволяет
+                    <br>
+                    оплачивать покупки 4 платежами (по 25%) без переплат в течение 6 недель. Для покупки этим
+                    <br>
+                    методом просто выберите в корзине "Оплата Долями".
                 </div>
             </div>
         </div>
