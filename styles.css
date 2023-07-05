@@ -529,3 +529,9 @@ body {
     border: transparent;
     color: #000;
   }
+
+  .warning {
+    margin-left: 40px;
+    font-family: Russo One;
+    color: #ff0000;
+  }
