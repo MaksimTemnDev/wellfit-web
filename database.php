@@ -34,7 +34,7 @@
 
         public function getAll($table, $sql = '', $params = [])
 		{
-			return $this->query("SELECT * FROM $table" . $sql, $params);
+			return $this->query("SELECT * FROM `$table`" . $sql, $params);
 		}
 
 		public function getRow($table, $sql = '', $params = [])
