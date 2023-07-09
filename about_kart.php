@@ -1,4 +1,12 @@
-<?php include("shapka.php") ?>
+<?php include("shapka.php");
+require_once("database.php");
+$bd = new DB;
+$current = (object) $bd->query("SELECT * FROM `products` WHERE id =" . $_GET['id']);
+$every = get_object_vars($current)[0];
+$prices = explode(" ", $every['prices']);
+$periods = explode(" ", $every['periods']);
+$checked = false;
+?>
 <!-- Содержимое страницы-->
 <div class="bigwcplug">
     <div class="container-fluid" style="padding-bottom: 190px;">
@@ -9,57 +17,64 @@
             <div class="col-md-6 mx-auto" style="padding-left: 30px; display: block;">
                 <p class="text-left"
                     style="color: #000; text-decoration: none; font-family: Russo One; font-size: 30px;">WF Волжский</p>
-                <p class="text-left"
-                    style="color: #000; text-decoration: none; font-family: Russo One; font-size: 24px;">
-                    1500 р.</p>
+                <p class="text-left" id="result"
+                    style="color: #000; text-decoration: none; font-family: Russo One; font-size: 24px;"><?php echo $prices[0]; ?> р.</p>
                 <div class="content">Клубная карта</div>
-                <div class="radio-container">
-                    <input class="radio-input" id="plus" type="radio" name="type" />
-                    <label class="radio" for="plus">WF PLUS (безлимит)</label>
-                    <input class="radio-input" id="light" type="radio" name="type" />
-                    <label class="radio" for="light">WF LIGHT (день с 07:00 до 16:00)</label>
-                </div>
-                <div style="margin-top: 70px;" class="content">Длительность</div>
-                <div class="radio-container">
-                    <input class="radio-input" id="1mon" type="radio" name="type2" />
-                    <label class="radio" for="1mon">1 МЕСЯЦ</label>
-                    <input class="radio-input" id="3mon" type="radio" name="type2" />
-                    <label class="radio" for="3mon">3 МЕСЯЦА</label>
-                    <input class="radio-input" id="12mon" type="radio" name="type2" />
-                    <label class="radio" for="12mon">12 МЕСЯЦЕВ</label>
-                </div>
+                <form action="" method="post">
+                    <div class="radio-container">
+                        <input class="radio-input" id="plus" type="radio" checked name="card" />
+                        <label class="radio" for="plus">WF PLUS (безлимит)</label>
+                        <input class="radio-input" id="light" type="radio" name="card" />
+                        <label class="radio" for="light">WF LIGHT (день с 07:00 до 16:00)</label>
+                    </div>
+                    <div style="margin-top: 120px;" class="content">Длительность</div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <div class="radio-container">
+                        <?php foreach ($periods as $per) { ?>
+                            <input class="radio-input" id="<?php echo $per; ?>mon" type="radio" <?php if (!$checked) {
+                                   echo "checked";
+                                   $checked = true;
+                               } ?> value="<?php echo $per; ?>" name="mon" />
+                            <label class="radio" for="<?php echo $per; ?>mon"><?php if (intval($per) < 4) {
+                                   echo $per . " МЕСЯЦ";
+                               } else {
+                                   echo $per . " МЕСЯЦЕВ";
+                               } ?> </label>
+                        <?php } ?>
+                    </div>
+                </form>
+                <script>
+                    const zero = "<?php echo $prices[0]; ?> р.";
+                    const first = "<?php echo $prices[1]; ?> р.";
+                    const second = "<?php echo $prices[2]; ?> р.";
+
+                    let radioBtns = document.querySelectorAll
+                        ("input[name='mon']");
+                    let result = document.getElementById("result");
+
+                    let findSelected = () => {
+                        let selected = document.querySelector
+                            ("input[name='mon']:checked").value;
+                        if (selected === "<?php echo $periods[0] ?>") {
+                            result.textContent = zero;
+                        } else if (selected === "<?php echo $periods[1] ?>") {
+                            result.textContent = first;
+                        } else {
+                            result.textContent = second;
+                        }
+                    }
+
+                    radioBtns.forEach(radioBtn => {
+                        radioBtn.addEventListener("change", findSelected);
+                    });
+                    findSelected();
+                </script>
                 <a href="#">
-                    <div class="red-btn_sm" style="margin-top: 130px;" data-toggle="modal" data-target="#modal">Добавить в корзину</div>
+                    <div class="red-btn_sm" style="margin-top: 190px;" data-toggle="modal" data-target="#modal">Добавить
+                        в корзину</div>
                 </a>
                 <div class="about_product" style="margin-top: 30px;">
-                    Клубная карта WF PLUS – это стандарт качества и наш топовый продукт.
-                    <br>
-                    <br>
-                    С этой картой вы сможете пользоваться всеми зонами клуба, в любое время и сколько угодно
-                    <br>
-                    раз. Одним словом «все включено»!
-                    <br>
-                    <br>
-                    Членство по безлимитной карте доступно в периодах от 1 до 12 месяцев.
-                    <br>
-                    Карта на короткий период позволяет использовать полноценно все основные зоны клубов, что
-                    <br>
-                    дает возможность протестировать и войти в регулярный режим тренировок.
-                    <br>
-                    <br>
-                    Покупка карты на длительный период – это залог вашего настроя на результат, за счет
-                    <br>
-                    которого вы также получаете весомую экономию т.к. чем больше период, тем ниже стоимость
-                    <br>
-                    одного занятия.
-                    <br>
-                    <br>
-                    При выборе карты на более длительный срок вы также получите дополнительные
-                    <br>
-                    преимущества. Например, карту можно переоформить или заморозить ее действие,
-                    <br>
-                    воспользоваться преимуществами партнерских программ и скидками на другие услуги клуба.
-                    <br>
+                    <?php echo $every['description']; ?>
                 </div>
                 <div class="inform">
                     <br>

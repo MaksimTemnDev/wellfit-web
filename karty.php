@@ -1,4 +1,10 @@
-<?php include("shapka.php") ?>
+<?php include("shapka.php");
+require_once("database.php");
+$bd = new DB;
+$all = $bd->getAll("products");
+$rows = round(count($all)/2);
+$records = count($all);
+?>
 <!-- Содержимое страницы-->
 <div class="bigwcplug">
     <div class="container text-center" style="padding-bottom: 190px;">
@@ -9,26 +15,39 @@
                     КЛУБНЫЕ КАРТЫ</p>
             </div>
         </div>
+        <?php for($rows; $rows>0; $rows--){?>
         <div class="row" style="margin-top: 70px; margin-bottom: 90px;">
+            <?php for($i = 0; $i<2; $i++){
+                if($records === 1){
+                    $i =2;
+                }else {
+                    $records--;
+                }
+                $current = (object) $all[$records];
+                $prices = explode(" ", $current->prices);
+                $min = intval($prices[1]);
+                foreach ($prices as $price){
+                    if(intval($price) < $min){
+                        $min = intval($price);
+                    }
+                }
+                ?>
             <div class="col-md-5 mx-auto">
-                <a href="http://localhost/fitnessProject/about_kart.php"><img src="images/akcia.jpg" class="img-fluid" alt=""></a>
-                <div class="title" style="padding-top: 20px; font-family: Russo One; font-size: 30px;">WF Волжский</div>
-                <div class="title" style="padding-top: 6px; font-size: 20px;">От 950 р.</div>
-                <a href="http://localhost/fitnessProject/about_kart.php">
+                <a href="http://localhost/fitnessProject/about_kart.php?id=<?php echo $current->id;?>"><img src="<?php echo $current->img; ?>" class="img-fluid"
+                        alt=""></a>
+                <div class="title" style="padding-top: 20px; font-family: Russo One; font-size: 30px;"><?php echo $current->title;?></div>
+                <div class="title" style="padding-top: 6px; font-size: 20px;">От <?php echo $min;?> р.</div>
+                <a href="http://localhost/fitnessProject/about_kart.php" name = "num<?php echo $current->id;?>">
                     <div class="red-btn_sm">Подробнее</div>
                 </a>
             </div>
-            <div class="col-md-5 mx-auto">
-                <a href="http://localhost/fitnessProject/about_kart.php"><img src="images/akcia.jpg" class="img-fluid" alt=""></a>
-                <div class="title" style="padding-top: 20px; font-family: Russo One; font-size: 30px;">WF Волжский</div>
-                <div class="title" style="padding-top: 6px; font-size: 20px;">От 950 р.</div>
-                <a href="http://localhost/fitnessProject/about_kart.php">
-                    <div class="red-btn_sm">Подробнее</div>
-                </a>
-            </div>
+            <?php }?>
+
+            
         </div>
+        <?php } ?>
     </div>
-    
+
 </div>
 <div class="littltewplug" style="top: -25%;">
     <div class="gray_content">
@@ -62,11 +81,11 @@
                                                 </div>
                                             </div>
                                             <div class="form-check">
-                                            <div class="checkbx">
-                                                        <input class="checkbox_inp" id="box1" type="checkbox">
-                                                        <label class="check_label" for="box1">Даю согласие на
+                                                <div class="checkbx">
+                                                    <input class="checkbox_inp" id="box1" type="checkbox">
+                                                    <label class="check_label" for="box1">Даю согласие на
                                                         обработку персональных <br>данных</label>
-                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <!--Grid column-->
