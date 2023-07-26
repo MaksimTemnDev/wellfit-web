@@ -12,7 +12,7 @@ $checked = false;
     <div class="container-fluid" style="padding-bottom: 190px;">
         <div class="row" style="margin-top: 70px; margin-bottom: 90px; margin-left: 20px; margin-right; 20px;">
             <div class="col-md-6">
-                <img src="images/akcia.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                <img src="<?php echo $every['img']?>" class="img-fluid" style="object-fit: cover;" alt="">
             </div>
             <div class="col-md-6 mx-auto" style="padding-left: 30px; display: block;">
                 <p class="text-left"
@@ -70,7 +70,7 @@ $checked = false;
                     findSelected();
                 </script>
                 <a href="#">
-                    <div class="red-btn_sm" style="margin-top: 190px;" data-toggle="modal" data-target="#modal">Добавить
+                    <div class="red-btn_sm" style="margin-top: 190px;" data-toggle="modal" data-target="#carry">Добавить
                         в корзину</div>
                 </a>
                 <div class="about_product" style="margin-top: 30px;">
@@ -111,72 +111,123 @@ $checked = false;
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="about_product">
-                    Все клубные карты теперь можно приобрести через сервис "ДОЛЯМИ", который позволяет
-                    <br>
-                    оплачивать покупки 4 платежами (по 25%) без переплат в течение 6 недель. Для покупки этим
-                    <br>
-                    методом просто выберите в корзине "Оплата Долями".
-                </div>
-            </div>
-        </div>
-    </div>
 
-</div>
-<div class="littltewplug" style="top: -25%;">
-    <div class="gray_content">
-        <div class="container">
-            <div class="row gx-4 fiten">
-                <div class="col righter">
-                    <img src="images/hard_gym.jpg" alt="" style="width:340px;height:auto; right: 100px;">
-                </div>
-                <div class="col lefter">
-                    <div class="labelAsk">Заказать обратный звонок</div>
-                    <!--Section: Contact v.2-->
-                    <section class="mb-4">
-                        <div class="row">
-                            <!--Grid column-->
-                            <div class="col-md-9 mb-md-0 mb-5">
-                                <form name="contact-form" action="mail.php" method="POST">
-                                    <!--Grid row-->
-                                    <div class="row">
-                                        <!--Grid column-->
-                                        <div class="col form_vert">
-                                            <div class="form_grup">
-                                                <div class="md-form mb-3">
-                                                    <input class="form_input" placeholder="Имя" type="text" id="name"
-                                                        name="name">
-                                                </div>
+                    <!-- Modal carry-->
+                    <div class="modal fade" id="carry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="shopping-cart">
+                                        <!-- Товар #1 -->
+                                        <div class="iteme">
+                                            <div class="buttons">
+                                                <span class="delete-btn"></span>
+                                                <span class="like-btn"></span>
                                             </div>
-                                            <div class="form_grup">
-                                                <div class="md-form mb-3">
-                                                    <input class="form_input" placeholder="+7 (999) 999-99-99"
-                                                        type="tel" id="telephone" name="phone">
-                                                </div>
+
+                                            <div class="image">
+                                                <img src="<?php echo $every['img']?>" width="10%" height="10%" alt="" />
                                             </div>
-                                            <div class="form-check">
-                                                <div class="checkbx">
-                                                    <input class="checkbox_inp" id="box1" type="checkbox">
-                                                    <label class="check_label" for="box1">Даю согласие на
-                                                        обработку персональных <br>данных</label>
-                                                </div>
+
+                                            <div class="description">
+                                                <span><?php echo $every['title']?></span>
                                             </div>
+
+                                            <div class="quantity">
+                                                <button class="plus-btn" type="button" name="button">
+                                                    <img src="plus.svg" alt="" />
+                                                </button>
+                                                <input type="text" name="name" value="1">
+                                                <button class="minus-btn" type="button" name="button">
+                                                    <img src="minus.svg" alt="" />
+                                                </button>
+                                            </div>
+
+                                            <div class="total-price">$549</div>
                                         </div>
-                                        <!--Grid column-->
                                     </div>
-                                </form>
-                                <a href="#" class="red-btn">Отправить <span class="flare"></span></a>
-                                <div class="status"></div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                    <!--Section: Contact v.2-->
+                    </div>
+                    <div class="about_product">
+                        Все клубные карты теперь можно приобрести через сервис "ДОЛЯМИ", который позволяет
+                        <br>
+                        оплачивать покупки 4 платежами (по 25%) без переплат в течение 6 недель. Для покупки этим
+                        <br>
+                        методом просто выберите в корзине "Оплата Долями".
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="littltewplug" style="top: -25%;">
+        <div class="gray_content">
+            <div class="container">
+                <div class="row gx-4 fiten">
+                    <div class="col righter">
+                        <img src="images/hard_gym.jpg" alt="" style="width:340px;height:auto; right: 100px;">
+                    </div>
+                    <div class="col lefter">
+                        <div class="labelAsk">Заказать обратный звонок</div>
+                        <!--Section: Contact v.2-->
+                        <section class="mb-4">
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-md-9 mb-md-0 mb-5">
+                                    <form name="contact-form" action="mail.php" method="POST">
+                                        <!--Grid row-->
+                                        <div class="row">
+                                            <!--Grid column-->
+                                            <div class="col form_vert">
+                                                <div class="form_grup">
+                                                    <div class="md-form mb-3">
+                                                        <input class="form_input" placeholder="Имя" type="text"
+                                                            id="name" name="name">
+                                                    </div>
+                                                </div>
+                                                <div class="form_grup">
+                                                    <div class="md-form mb-3">
+                                                        <input class="form_input" placeholder="+7 (999) 999-99-99"
+                                                            type="tel" id="telephone" name="phone">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <div class="checkbx">
+                                                        <input class="checkbox_inp" id="box1" type="checkbox">
+                                                        <label class="check_label" for="box1">Даю согласие на
+                                                            обработку персональных <br>данных</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Grid column-->
+                                        </div>
+                                    </form>
+                                    <a href="#" class="red-btn">Отправить <span class="flare"></span></a>
+                                    <div class="status"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Section: Contact v.2-->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Конец содержимого страницы-->
-<?php include("footer.php") ?>
+    <!-- Конец содержимого страницы-->
+    <?php include("footer.php") ?>
